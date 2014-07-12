@@ -1,0 +1,666 @@
+/*
+	Sliders Everywhere Css
+*/
+
+.SEslider {
+  clear: both;
+  margin-bottom: 10px;
+  position: relative;
+  z-index:1;
+  width:100%;
+}
+ 
+.SEslider.withControls {
+	margin-bottom:20px;
+}
+
+.SEslider.center {
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.SEslider.side {
+  clear: none;
+  float: left;
+}
+
+.SEslider ul {
+	list-style:none;
+}
+
+.SEslider a, .SEslider a img {
+	text-decoration:none;
+	outline:none;
+}
+
+.SEslider:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.SEslider:before {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+ 
+.noJs .SEslider li {
+	display:none;
+}
+
+.noJs .SEslider li.primo{
+	display:block;
+}
+
+.SEslider.notLoaded li.primo {
+  position: relative;
+}
+
+.se-wrapper {
+	position:relative;
+}
+
+.SEslider .se-wrapper {
+  clear: both;
+}
+
+.se-wrapper a, .se-wrapper a:hover {
+	text-decoration:none;
+}
+ 
+/*next prev button*/
+
+.se-next, .se-prev {
+	background:#000;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  display: block;
+  height: 32px;
+  line-height: 0;
+  margin-top: -15px;
+  opacity: 0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  overflow: hidden;
+  position: absolute;
+  text-indent: -999em;
+  top: 50%;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 32px;
+  z-index: 100;
+}
+
+.se-next.disabled, .se-prev.disabled {
+	display:none;
+}
+
+/*next/prev button hover state*/
+.se-next:hover,
+.se-prev:hover {
+	text-decoration:none;
+	text-shadow:0 0 3px;
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.se-prev:after, .se-next:after {
+  color: #FFFFFF;
+  content: "\2039";
+  display: table-cell;
+  font-family: monospace;
+  font-size: 44px;
+  font-weight: bold;
+  height: 100%;
+  left: 0;
+  line-height:29px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 150;
+}
+
+.se-next:after {
+	content: "\203A";
+}
+
+.shop1_2 .se-next, .shop1_2 .se-prev {
+	background: url("leftright-shop1_2.png") no-repeat scroll 0 0 transparent;
+}
+
+.se-next, .shop1_2 .se-next {
+  background-position:0 -32px;
+  right: 10px;
+}
+
+.se-prev {
+  left: 5px;
+}
+
+/*pager links*/
+.se-controls {
+  color: #666666;
+  font-size: 11px;
+  left: 0;
+  text-align: left;
+}
+
+.se-controls-auto {
+  display: block;
+  font-size: 14px;
+  left: 0;
+  padding: 3px;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  width: 100%;
+}
+
+.se-pager {
+  bottom: 15%;
+  left: 0;
+  padding: 0 0 0 5%;
+  position: absolute;
+  z-index: 100;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.pager-centered .se-pager {
+  bottom: 15%;
+  left: 0;
+  padding: 0 0 0 5%;
+  position: absolute;
+  z-index: 100;
+}
+
+.se-pager-item {
+  border: 3px solid #aaa;
+  border: 3px solid rgba(0,0,0,0.5);
+  border-radius: 30px;
+  float: left;
+  height: 20px;
+  margin: 0 3px;
+  width: 20px;
+  transition: all 0.15s;
+  -webkit-transition: all 0.15s ease 0s;
+  cursor:pointer;
+  display:inline-block;
+  position:relative;
+  -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+	 -o-box-sizing: content-box;
+	  box-sizing: content-box;
+}
+
+.se-pager-item:hover .se-pager-link {
+	background-color:#FFA500;
+	height: 16px;
+	width: 16px;
+	margin: 2px;
+}
+
+.se-pager-item:hover {
+	box-shadow:0 0 3px #fff;
+	border:3px solid #fff;
+}
+
+.se-pager a {
+  background: none repeat scroll 0 0 #0090F0;
+  border-radius: 30px;
+  color: #000000;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  height: 10px;
+  margin: 5px;
+  padding: 0;
+  text-decoration: none;
+  text-indent: -999em;
+  transition: all 0.15s ease 0s;
+  -webkit-transition: all 0.15s ease 0s;
+  width: 10px;
+  position:absolute;
+  left:0;
+  top:0;
+    -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+	 -o-box-sizing: content-box;
+	  box-sizing: content-box;
+}
+
+.shop1_2 .se-pager a {
+	background:url(imgs/pallino-shop1_2.png) no-repeat 0 0;
+}
+
+.se-controls-direction {}
+
+/*
+ * End color scheme styles
+ */
+
+
+
+
+/*pager links hover and active states*/
+.se-pager-link.active {
+	background-color:#FFA500;
+	height: 16px;
+	width: 16px;
+	margin: 2px;
+}
+
+/*captions*/
+.se-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.se-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.se-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+.SEslider li {
+	position:relative;
+}
+
+.SEslider li img {
+	width:100%;
+	height:auto;
+}
+
+.slidetitle {
+	position:absolute;
+	top:5%;
+	padding:5px 10px;
+	color:#fff;
+	background:rgba(0,0,0,0.5);
+	font-weight:normal;
+}
+
+.shop1_2 .slidetitle {
+	background:url(imgs/blue-trans.png);
+}
+
+.slidetitle.right {
+	right:0;
+}
+
+.slidetitle.left {
+	left:0;
+}
+
+.SEslider:hover .slide_description{
+	height:auto;
+	padding: 10px 2%;
+}
+
+.slide_description {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #FFFFFF;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0 2%;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 96%;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+-ms-box-sizing: content-box;
+-o-box-sizing: content-box;
+box-sizing: content-box;
+}
+
+.slider_title_block.bgcolor {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 4px 11px 5px;
+    text-align: left;
+    text-transform: capitalize;
+	font-size:14px;
+}
+
+/* altri sliders*/
+
+.SEslider.bxslider_1 {
+  left: 190px;
+  position: absolute;
+  top: 23px;
+  width: 370px;
+  height: 93px;
+}
+
+.SEslider.bxslider_2, .SEslider.bxslider_6 {
+  float: left;
+  width: 40%;
+}
+
+.SEslider.bxslider_2, .SEslider.bxslider_5 {
+	margin: 0 1% 10px 0;
+}
+
+.SEslider.bxslider_3, .SEslider.bxslider_5 {
+  width: 59%;
+  float:left;
+}
+
+.SEslider.bxslider_4 {
+  clear: both;
+}
+
+.SEslider li img {
+  display: block;
+  line-height: 120%;
+  vertical-align: bottom;
+}
+
+/* 3d Flip Mode*/
+
+.SEslider.mode_3Dflip ul {
+	perspective:2000px;
+	perspective-origin:50% 50%;
+	height:100%;
+}
+
+.SEslider.mode_3Dflip li {
+	-webkit-transform:rotateY(-90deg);
+	transform:rotateY(-90deg);
+	-webkit-transition:all 300ms ease-in 0s;
+	transition:all 0 ease-in 0s;
+}
+
+.SEslider.mode_3Dflip li.left {
+	-webkit-transform:rotateY(90deg);
+	transform:rotateY(90deg);
+	-webkit-transition:all 300ms ease-in 0s;
+	transition:all 0 ease-in 0s;
+}
+
+.SEslider.mode_3Dflip li.old.next {
+	-webkit-transform:rotateY(90deg);
+	transform:rotateY(90deg);
+	-webkit-transition:all 300ms ease-in 0s;
+	transition:all 300ms ease-in 0s;
+}
+
+.SEslider.mode_3Dflip li.active-slide {
+	-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);
+	-webkit-transition:all 300ms ease-out 300ms;
+	transition:all 300ms ease-out 300ms;
+}
+
+.SEslider.mode_3Dflip li.old.prev {
+	-webkit-transform:rotateY(-90deg);
+	transform:rotateY(-90deg);
+	-webkit-transition:all 300ms ease-in 0s;
+	transition:all 300ms ease-in 0s;
+}
+
+.SEslider.notLoaded.mode_3Dflip li {
+  transform: rotateY(0deg);
+  -webkit-transform:rotateY(0deg);
+}
+
+.SEslider.notLoaded li {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/** Area styles **/
+/** simple: **/
+.SEslider .areaslide {
+	display:block;
+	position:absolute;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+}
+
+.SEslider .areatitle:before {
+  border-bottom: 10px solid transparent;
+  border-radius: 0;
+  border-right: 15px solid #DCDCED;
+  border-top: 10px solid transparent;
+  color: #FFFFFF;
+  content: "";
+  font-family: Consolas;
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 0;
+}
+
+.SEslider .areatitle:after {
+  background: none repeat scroll 0 0 #808080;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 3px;
+  position: absolute;
+  right: 100%;
+  top: 5px;
+  width: 4px;
+  z-index: 10;
+}
+
+.SEslider .areatitle {
+  background: none repeat scroll 0 0 #DCDCED;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #222222;
+  font-size: 14px;
+  height: 20px;
+  left: 50%;
+  line-height: 20px;
+  margin: -10px 0 0;
+  padding: 0 5px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
+
+.SEslider .areadesc {
+  background: none repeat scroll 0 0 #EEEEEE;
+  border: 1px solid #CCCCCC;
+  bottom: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: #222222;
+  left: 50%;
+  margin-bottom: 15px;
+  padding: 3px 7px;
+  position: absolute;
+  display:none;
+  font-size: 110%;
+}
+
+.SEslider .areaslide:hover .areadesc {
+	display:block;
+}
+
+.areabutt {
+  background: none repeat scroll 0 0 #E5E5E5;
+  border: 1px solid #9CACAC;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 1px #FFFFFF inset;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 160%;
+  padding: 6px 12px;
+}
+
+.areabuttcont {
+  display: block;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/** simple dark **/
+
+.SEslider .dark .areatitle {
+  background: none repeat scroll 0 0 #444444;
+  color: #EEEEEE;
+}
+
+.SEslider .dark .areatitle:before {
+  border-right: 15px solid #444444;
+}
+
+.SEslider .dark .areadesc {
+  background: none repeat scroll 0 0 #444444;
+  border-color: #666666;
+  color: #EEEEEE;
+}
+
+/* simple transparent */
+.SEslider .simple.transparent .areatitle {
+  background: none repeat scroll 0 0 transparent;
+  box-shadow: none;
+  color: #FFFFFF;
+  font-size: 220%;
+  font-weight: bold;
+  left: 0;
+  line-height: 120%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.SEslider .simple.transparent .areatitle:before,
+.SEslider .simple.transparent .areatitle:after {
+	display:none;
+}
+
+/** block style **/
+.SEslider .areaslide.block {
+  background: none repeat scroll 0 0 #FFFFFF;
+  background:none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  box-shadow:0 2px 3px rgba(0, 0, 0, 0.5);
+}
+.SEslider .areaslide.block .areatitle {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  font-size: 250%;
+  left: auto;
+  line-height: 120%;
+  margin: 0 0 10px;
+  padding: 5px;
+  position: relative;
+  top: auto;
+  color:#444;
+}
+
+.SEslider .block .areatitle:before, .SEslider .block .areatitle:after {
+	display:none;
+}
+
+.SEslider .areaslide.block .areadesc {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: transparent;
+  border: 0 none;
+  bottom: auto;
+  box-shadow: 0 0 0;
+  display: block;
+  left: auto;
+  margin: 0;
+  position: relative;
+  color:#666;
+}
+
+/** block dark **/
+.areaslide.block.dark {
+  background: none repeat scroll 0 0 #222222;
+  background: rgba(0,0,0,0.8);
+  color: #EEEEEE;
+}
+.SEslider .block.dark .areatitle {
+  color: #EEEEEE;
+}
+
+.SEslider .areaslide.block.dark .areadesc {
+  color: #CCCCCC;
+}
+
+.SEslider .areaslide.block.dark .areabutt {
+  background: none repeat scroll 0 0 #444444;
+  border: 1px solid #666666;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 3px #000000 inset;
+  color: #EEEEEE;
+}
+
+/* block transparent */
+
+.SEslider .areaslide.block.transparent {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+
+.SEslider .areaslide.block.transparent .areatitle {
+  color: #F4F4F4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  padding:5px 0;
+}
+
+.SEslider .areaslide.block.transparent .areadesc {
+	color: #F4F4F4;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	padding:5px 0;
+}
+
+.SEslider .areaslide.block.transparent .areabuttcont {
+	text-align:left;
+}
+
+
+
+
+
+.SEslider .areatitle {
+  background: none repeat scroll 0 0 #DCDCED;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #222222;
+  font-size: 14px;
+  height: 20px;
+  left: 50%;
+  line-height: 20px;
+  margin: -10px 0 0;
+  padding: 0 5px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}

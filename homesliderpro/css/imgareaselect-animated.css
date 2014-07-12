@@ -1,0 +1,57 @@
+/*
+ * imgAreaSelect animated border style
+ */
+
+.imgareaselect-border1 {
+	background: url(border-anim-v.gif) repeat-y left top;
+	
+}
+
+.imgareaselect-border2 {
+    background: url(border-anim-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(border-anim-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(border-anim-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+	opacity: 1;
+}
+
+.imgareaselect-handle {
+  background-color: #FFFFFF;
+  border: 2px solid #006699;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 10px;
+  opacity: 1;
+  width: 10px;
+}
+
+.imgareaselect-outer {
+	background-color: #000;
+    filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.imgareaselect-selection {
+}
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4,
+.imgareaselect-handle,
+.imgareaselect-outer,
+.imgareaselect-selection{
+	-moz-transform:translateZ(0px);
+	-webkit-transform:translateZ(0px);
+	-ms-transform:translateZ(0px);
+	-o-transform:translateZ(0px);
+	transform:translateZ(0px);
+	transition:all 0s linear
+}
